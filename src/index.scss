@@ -1,0 +1,22 @@
+$primary_color:hsl(193, 38%, 86%);
+$secondary_color: hsl(150, 100%, 66%);
+$grayish_blue: hsl(217, 19%, 38%);
+$dark_grayish_blue: hsl(217, 19%, 24%);
+
+$font: 'Manrope', sans-serif;
+
+*{
+    margin: 0;
+    padding: 0;
+    font-size: 28px;
+}
+
+html{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: $dark_grayish_blue;
+    width: 100vw;
+    height: 100vh;
+}

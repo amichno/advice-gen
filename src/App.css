@@ -1,38 +1,119 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 28px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+  background-color: #323a49;
+  width: 100vw;
+  height: 100vh;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container {
+  margin: 20vh auto;
+  width: 50%;
+  min-height: 30%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-.App-link {
-  color: #61dafb;
+.root {
+  width: 100%;
+  height: 100%;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.Advice {
+  width: 30vw;
+  -ms-flex-negative: 1;
+      flex-shrink: 1;
+  height: 40vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #4e5d73;
+  padding: 2rem 3rem;
+  text-align: center;
+  border-radius: 15px;
 }
+
+.api {
+  width: 100%;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  font-family: "Manrope", sans-serif;
+  font-size: 1rem;
+}
+
+.api:first-child {
+  color: #52ffa8;
+  font-size: 0.5rem;
+}
+
+.api p:nth-child(2) {
+  color: #cee3e9;
+  padding: 1rem 2rem;
+}
+
+.divider {
+  background-image: url(/images/pattern-divider-desktop.svg);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: contain;
+  width: 50%;
+  height: 1rem;
+}
+
+.dice {
+  width: 5vw;
+  height: 5vw;
+  margin: auto auto;
+  -ms-flex-negative: 2;
+      flex-shrink: 2;
+  border-radius: 100%;
+  margin-top: -2.5vw;
+  z-index: 2;
+}
+
+.dice .button-dice {
+  background-image: url(/images/icon-dice.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #52ffa8;
+  border-radius: 100%;
+  width: 5vw;
+  height: 5vw;
+  border: none;
+  z-index: 2;
+}
+/*# sourceMappingURL=main.css.map */
