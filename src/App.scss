@@ -1,5 +1,17 @@
-@import "config";
-@import "mixins";
+@mixin flex-column-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+$primary_color:hsl(193, 38%, 86%);
+$secondary_color: hsl(150, 100%, 66%);
+$grayish_blue: hsl(217, 19%, 38%);
+$dark_grayish_blue: hsl(217, 19%, 24%);
+
+$font: 'Manrope', sans-serif;
+
 
 .container{
     margin: 20vh auto;
@@ -18,13 +30,14 @@
 }
 
 .Advice{
-    width: 30vw;
+    min-width: 30vw;
+    //max-width: 50vw;
     flex-shrink: 1;
     height: 40vh;
     @include flex-column-center;
     background-color: $grayish_blue;
     //position: relative;
-    padding: 2rem 3rem;
+    padding: 1.5rem 1.5rem;
     text-align: center;
     -webkit-border-radius: 15px;
     -moz-border-radius: 15px;
@@ -36,19 +49,28 @@
     flex:1;
     font-family: $font;
     font-size: 1rem;
-    &:first-child{
+    padding-bottom: 1.5rem;
+    font-weight: 700;
+    .number{
         color:$secondary_color;
-        font-size: 0.5rem;
+        font-size: 0.5em;
+        text-transform: uppercase;
+        padding: 1rem 0.5rem;
+        
+        letter-spacing: 0.1em;
     }
-    p:nth-child(2){
+
+    .adv{
         color:$primary_color;
-        padding: 1rem 2rem;
+        padding: 1rem 0.5rem;
+        font-size: 1.9vw;
+        height: 20vh;
     }
 }
 
 .divider{
     //flex:6;
-    background-image: url(/images/pattern-divider-desktop.svg);
+    background-image: url(../images/pattern-divider-desktop.svg);
     background-repeat: no-repeat;
     background-position: bottom;
     background-size: contain;
@@ -58,21 +80,21 @@
     
 
 .dice{
-    width: 5vw;
-    height:5vw;
+    min-width: 5vw;
+    min-height:5vw;
     margin: auto auto;
     flex-shrink: 2;
     border-radius: 100%;
-    margin-top: -2.5vw;
+    margin-top: -1.25rem;
     z-index: 2;
     .button-dice{
-        background-image: url(/images/icon-dice.svg);
+        background-image: url(../images/icon-dice.svg);
         background-repeat: no-repeat;
         background-position: center;
         background-color: $secondary_color;
         border-radius: 100%;
-        width: 5vw;
-        height:5vw;
+        min-width: 2.5rem;
+        min-height: 2.5rem;
         border: none;
         //margin-top: -3vw;
         z-index: 2;

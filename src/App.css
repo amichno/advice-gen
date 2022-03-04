@@ -1,20 +1,3 @@
-* {
-  margin: 0;
-  padding: 0;
-  font-size: 28px;
-}
-
-html {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-body {
-  background-color: #323a49;
-  width: 100vw;
-  height: 100vh;
-}
-
 .container {
   margin: 20vh auto;
   width: 50%;
@@ -43,7 +26,7 @@ body {
 }
 
 .Advice {
-  width: 30vw;
+  min-width: 30vw;
   -ms-flex-negative: 1;
       flex-shrink: 1;
   height: 40vh;
@@ -61,7 +44,7 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   background-color: #4e5d73;
-  padding: 2rem 3rem;
+  padding: 1.5rem 1.5rem;
   text-align: center;
   border-radius: 15px;
 }
@@ -73,20 +56,27 @@ body {
           flex: 1;
   font-family: "Manrope", sans-serif;
   font-size: 1rem;
+  padding-bottom: 1.5rem;
+  font-weight: 700;
 }
 
-.api:first-child {
+.api .number {
   color: #52ffa8;
-  font-size: 0.5rem;
+  font-size: 0.5em;
+  text-transform: uppercase;
+  padding: 1rem 0.5rem;
+  letter-spacing: 0.1em;
 }
 
-.api p:nth-child(2) {
+.api .adv {
   color: #cee3e9;
-  padding: 1rem 2rem;
+  padding: 1rem 0.5rem;
+  font-size: 1.9vw;
+  height: 20vh;
 }
 
 .divider {
-  background-image: url(/images/pattern-divider-desktop.svg);
+  background-image: url(../images/pattern-divider-desktop.svg);
   background-repeat: no-repeat;
   background-position: bottom;
   background-size: contain;
@@ -95,25 +85,25 @@ body {
 }
 
 .dice {
-  width: 5vw;
-  height: 5vw;
+  min-width: 5vw;
+  min-height: 5vw;
   margin: auto auto;
   -ms-flex-negative: 2;
       flex-shrink: 2;
   border-radius: 100%;
-  margin-top: -2.5vw;
+  margin-top: -1.25rem;
   z-index: 2;
 }
 
 .dice .button-dice {
-  background-image: url(/images/icon-dice.svg);
+  background-image: url(../images/icon-dice.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-color: #52ffa8;
   border-radius: 100%;
-  width: 5vw;
-  height: 5vw;
+  min-width: 2.5rem;
+  min-height: 2.5rem;
   border: none;
   z-index: 2;
 }
-/*# sourceMappingURL=main.css.map */
+/*# sourceMappingURL=App.css.map */

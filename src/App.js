@@ -1,48 +1,45 @@
 import logo from './logo.svg';
-import './App.css';
+import './App.scss';
 import React from 'react';
-import axios from 'axios';
 
 class App extends React.Component{
 
   constructor(){
     super()
-   
   }
-
-  changeAdvice(id, advice)
-  {
-    const paragraf = document.getElementsByClassName("adv");
-    paragraf[0].textContent = id;
-
-    paragraf[1].textContent = advice;
-  }
-
 
   getAdvice(){
     const url_api = "https://api.adviceslip.com/advice";
+   // let control = new AbortController();
+    //let sign = control.signal;
     fetch(url_api).then(
                         response=>response.json()).then(
                                                         jsonRes => {
                                                         const data =  JSON.stringify(jsonRes);
                                                         const dataJs = JSON.parse(data);
-                                                        console.log(dataJs.slip.advice);
+                                                        //console.log(dataJs.slip.advice);
+                                                        const paragraf = document.getElementsByClassName("number");
+                                                        paragraf[0].textContent = "advice #"+dataJs.slip.id;
 
-                                                        this.changeAdvice(dataJs.slip.id, dataJs.slip.advice);
+                                                        const paragraf_adv = document.getElementsByClassName("adv");
+                                                        paragraf_adv[0].textContent = '"'+ dataJs.slip.advice+'"';
+                                                        
 
                             }
                           );
-    
+    //console.log(sign);
+   // console.log(control.signal);
+    //control.abort();
   }
 
 
   render(){
     return (
-      <div className="container">
+      <div className="container" >
               <div className="Advice">
                   <div className="api">
-                      <p className="adv">Advice</p>
-                      <p>Text</p>
+                      <p className="number">advice </p>
+                      <p className="adv">Text</p>
                   </div>
                   
               </div>
