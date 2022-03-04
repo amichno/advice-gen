@@ -10,16 +10,27 @@ class App extends React.Component{
    
   }
 
-  changeAdvice(){
+  changeAdvice(id, advice)
+  {
     const paragraf = document.getElementsByClassName("adv");
-    console.log(paragraf[0].textContent);
+    paragraf[0].textContent = id;
 
+    paragraf[1].textContent = advice;
+  }
+
+
+  getAdvice(){
     const url_api = "https://api.adviceslip.com/advice";
     fetch(url_api).then(
                         response=>response.json()).then(
-                          jsonRes => {
-                            console.log(jsonRes.data.id)
-                          }
+                                                        jsonRes => {
+                                                        const data =  JSON.stringify(jsonRes);
+                                                        const dataJs = JSON.parse(data);
+                                                        console.log(dataJs.slip.advice);
+
+                                                        this.changeAdvice(dataJs.slip.id, dataJs.slip.advice);
+
+                            }
                           );
     
   }
@@ -36,7 +47,7 @@ class App extends React.Component{
                   
               </div>
               <div className="dice">  
-                    <button className ="button-dice" onClick={this.changeAdvice} ></button>        
+                    <button className ="button-dice" onClick={this.getAdvice} ></button>        
               </div>
           </div>
     );
