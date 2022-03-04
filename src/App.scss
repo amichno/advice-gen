@@ -27,6 +27,7 @@ $font: 'Manrope', sans-serif;
     width: 100%;
     height: 100%;
     align-self: center;
+    margin:auto auto;
 }
 
 .Advice{
@@ -98,6 +99,9 @@ $font: 'Manrope', sans-serif;
         border: none;
         //margin-top: -3vw;
         z-index: 2;
+        &:hover{
+            box-shadow: 0 0 25px $secondary_color;
+        }
     }
 }
 
