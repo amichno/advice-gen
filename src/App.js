@@ -8,6 +8,10 @@ class App extends React.Component{
     super()
   }
 
+  componentDidMount(){
+    this.getAdvice();
+  }
+
   getAdvice(){
     const url_api = "https://api.adviceslip.com/advice";
     fetch(url_api).then(
@@ -33,8 +37,8 @@ class App extends React.Component{
       <div className="container" >
               <div className="Advice">
                   <div className="api">
-                      <p className="number">advice </p>
-                      <p className="adv">Text</p>
+                      <p className="number"></p>
+                      <p className="adv"></p>
                   </div>
                   <Divider />
               </div>
