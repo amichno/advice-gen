@@ -14,12 +14,12 @@ class App extends React.Component{
 
   getAdvice(){
     const url_api = "https://api.adviceslip.com/advice";
-    fetch(url_api).then(
+    fetch(url_api,  {cache: "no-cache"}).then(
                         response=>response.json()).then(
                                                         jsonRes => {
                                                         const data =  JSON.stringify(jsonRes);
                                                         const dataJs = JSON.parse(data);
-                                                        //console.log(dataJs.slip.advice);
+                                                      
                                                         const paragraf = document.getElementsByClassName("number");
                                                         paragraf[0].textContent = "advice #"+dataJs.slip.id;
 
