@@ -1,3 +1,10 @@
+$primary_color:hsl(193, 38%, 86%);
+$secondary_color: hsl(150, 100%, 66%);
+$grayish_blue: #313a49;
+$dark_grayish_blue: #202632;
+
+$font: 'Manrope', sans-serif;
+
 @mixin flex-column-center {
     display: flex;
     flex-direction: column;
@@ -5,18 +12,11 @@
     justify-content: center;
 }
 
-$primary_color:hsl(193, 38%, 86%);
-$secondary_color: hsl(150, 100%, 66%);
-$grayish_blue: hsl(217, 19%, 38%);
-$dark_grayish_blue: hsl(217, 19%, 24%);
 
-$font: 'Manrope', sans-serif;
 
 
 .container{
     margin: 20vh auto;
-    
-    //background-color: rgb(44, 158, 114);
     width: 50%;
     min-height:30%;
    @include flex-column-center;
@@ -32,12 +32,10 @@ $font: 'Manrope', sans-serif;
 
 .Advice{
     min-width: 30vw;
-    //max-width: 50vw;
     flex-shrink: 1;
     height: 40vh;
     @include flex-column-center;
     background-color: $grayish_blue;
-    //position: relative;
     padding: 1.5rem 1.5rem;
     text-align: center;
     -webkit-border-radius: 15px;
@@ -47,7 +45,7 @@ $font: 'Manrope', sans-serif;
 
 .api{
     width:100%;
-    flex:1;
+    //flex:1;
     font-family: $font;
     font-size: 1rem;
     padding-bottom: 1.5rem;
@@ -56,8 +54,7 @@ $font: 'Manrope', sans-serif;
         color:$secondary_color;
         font-size: 0.5em;
         text-transform: uppercase;
-        padding: 1rem 0.5rem;
-        
+        padding: 1rem 0.5rem; 
         letter-spacing: 0.1em;
     }
 
@@ -70,13 +67,17 @@ $font: 'Manrope', sans-serif;
 }
 
 .divider{
-    //flex:6;
+   // flex:6;
     background-image: url(../images/pattern-divider-desktop.svg);
     background-repeat: no-repeat;
-    background-position: bottom;
-    background-size: contain;
-    width:50%;
-    height: 1rem;
+    background-position: center;
+    //background-size:cover;
+    width:100%;
+    min-width: 144px;
+    min-height: 3rem;
+    z-index: 2;
+    margin-top:  -3rem;
+    
 }
     
 
@@ -106,5 +107,11 @@ $font: 'Manrope', sans-serif;
 }
 
 
-
+@media (max-width: 375px) {
+    
+    .api .adv {
+        font-size: 18px;
+    }
+    
+}
 

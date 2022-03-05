@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+import Divider from './Divider';
 import './App.scss';
 import React from 'react';
 
@@ -10,8 +10,6 @@ class App extends React.Component{
 
   getAdvice(){
     const url_api = "https://api.adviceslip.com/advice";
-   // let control = new AbortController();
-    //let sign = control.signal;
     fetch(url_api).then(
                         response=>response.json()).then(
                                                         jsonRes => {
@@ -27,9 +25,6 @@ class App extends React.Component{
 
                             }
                           );
-    //console.log(sign);
-   // console.log(control.signal);
-    //control.abort();
   }
 
 
@@ -41,7 +36,7 @@ class App extends React.Component{
                       <p className="number">advice </p>
                       <p className="adv">Text</p>
                   </div>
-                  
+                  <Divider />
               </div>
               <div className="dice">  
                     <button className ="button-dice" onClick={this.getAdvice} ></button>        
