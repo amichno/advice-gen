@@ -1,4 +1,4 @@
-![preview](./design/desktop-design.jpg)
+![preview](./images/ag.png)
 This is my another chellenge from https://www.frontendmentor.io
 
 Simple REACT web page with Advice generator Api.
